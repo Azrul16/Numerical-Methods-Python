@@ -1,4 +1,4 @@
-import numpy as np
+import numpy as np # type: ignore
 
 # Coefficients matrix
 A = np.array([

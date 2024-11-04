@@ -1,4 +1,4 @@
-import numpy as np
+import numpy as np # type: ignore
 
 # Input number of variables
 n = int(input("Enter the number of variables: "))
@@ -12,12 +12,9 @@ for i in range(n):
     row = input(f"Row {i+1}: ").split()
     augmented_matrix[i] = [float(num) for num in row]
 
-# Gauss-Jordan elimination
 for i in range(n):
-    # Make the diagonal contain all 1's
     augmented_matrix[i] = augmented_matrix[i] / augmented_matrix[i, i]
     
-    # Make the other entries in the current column 0
     for j in range(n):
         if i != j:
             factor = augmented_matrix[j, i]
